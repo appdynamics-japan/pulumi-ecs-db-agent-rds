@@ -1,0 +1,6 @@
+*.pyc
+venv/
+.vscode/
+frontend.py
+*.sh
+
