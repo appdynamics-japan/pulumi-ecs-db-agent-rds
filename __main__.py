@@ -22,8 +22,8 @@ if not db_password:
     password=random.RandomPassword('db_password',
         length=16,
         special=True,
-        override_special='_%@',
-        )
+        override_special='_#@',
+    )
     # Pulumi knows this provider is used to create a password and thus automatically protects it going forward.
     db_password=password.result
 
@@ -38,7 +38,7 @@ be=backend.Db(f'{service_name}-be', backend.DbArgs(
     db_name=db_name,
     db_user=db_user,
     db_password=db_password,
-    publicly_accessible=True,  # Uncomment this to override for testing
+    publicly_accessible=False,  # Uncomment this to override for testing
     subnet_ids=subnet_ids,
     security_group_ids=[network.rds_security_group.id]
 ))
