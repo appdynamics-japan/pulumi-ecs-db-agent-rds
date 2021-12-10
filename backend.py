@@ -10,9 +10,9 @@ class DbArgs:
                 subnet_ids=None,
                 security_group_ids=None,
                 allocated_storage=20,
-                engine='oracle-ee',
-                engine_version='19.0.0.0.ru-2019-07.rur-2019-07.r1',
-                instance_class='db.m5.xlarge',
+                engine='mysql',
+                engine_version='5.7',
+                instance_class='db.t2.medium',
                 storage_type='gp2',
                 skip_final_snapshot=True,
                 publicly_accessible=True):
